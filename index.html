@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Anand Dalvi — Data Analytics Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon (optional) — place favicon.ico in repo root or remove this line -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Icons + Theme CSS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="projects.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+      <li><a href="resume.html"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
+      <li><a href="projects.html"><i class="fa-solid fa-diagram-project"></i> Portfolio</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
     </ul>
   </nav>
 
+  <!-- Hero / Intro -->
   <header class="home-section">
-    <h1>Hi, I'm Anand Dalvi</h1>
-    <p>Data Analyst | MSc. Economics (Data Analytics)</p>
-    <p>Welcome to my portfolio — explore my projects, experience, and ways to connect with me.</p>
+    <h1>Hello, I'm <span style="font-weight:700;">Anand Dalvi</span></h1>
+    <p>Data Analyst · MSc. Economics (Data Analytics)</p>
+    <div class="hero-buttons">
+      <a class="btn" href="about.html"><i class="fa-solid fa-user"></i> About Me</a>
+      <a class="btn btn-outline" href="projects.html"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
+    </div>
   </header>
+
+  <!-- Optional quick intro section (keep or remove) -->
+  <section>
+    <h2>What I Do</h2>
+    <p>
+      I analyze data to uncover insights and build clear visuals for decision-making.
+      Tools I enjoy: Python, R, SQL, Power BI, Excel. Interests: econometrics,
+      hypothesis testing, and business analytics.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Anand Dalvi</p>
+    <a href="https://linkedin.com/in/ananddalvi31" target="_blank" rel="noopener">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/anandd31" target="_blank" rel="noopener">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </footer>
 </body>
 </html>
