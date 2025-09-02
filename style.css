@@ -1,107 +1,123 @@
-/* Base reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ==== Reset ==== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
-  padding-top: 60px; /* prevent nav overlap */
   transition: background 0.3s ease, color 0.3s ease;
+  padding-top: 70px;
 }
 
-/* Navigation bar */
+/* ==== Navigation ==== */
 nav {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 0; left: 0; width: 100%;
+  background: var(--nav-bg);
   padding: 1rem 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: background 0.3s ease;
+  z-index: 1000;
 }
-
 nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
+  display: flex; justify-content: center; list-style: none;
 }
-
-nav ul li {
-  margin: 0 15px;
-}
-
+nav ul li { margin: 0 15px; }
 nav ul li a {
   text-decoration: none;
   font-weight: 600;
+  color: var(--nav-link);
   transition: color 0.3s ease;
 }
+nav ul li a:hover { color: var(--accent); }
 
-/* Hero section */
+/* ==== Hero Section ==== */
 .home-section {
   text-align: center;
-  padding: 120px 20px 60px;
-  max-width: 800px;
-  margin: auto;
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, var(--hero-grad-1), var(--hero-grad-2));
+  color: white;
 }
-
 .home-section h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
 }
-
 .home-section p {
-  margin-top: 10px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.hero-buttons .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 5px;
+  background: white;
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.hero-buttons .btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
 }
 
-/* Light theme */
+/* ==== Sections ==== */
+section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
+}
+h2 { margin-bottom: 20px; color: var(--accent); }
+h3 { margin: 15px 0 8px; }
+
+/* ==== Project Cards ==== */
+.project {
+  background: var(--card-bg);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ==== Footer ==== */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+  background: var(--nav-bg);
+  color: var(--nav-link);
+}
+footer a {
+  color: var(--accent);
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+/* ==== Auto Dark/Light Mode ==== */
 @media (prefers-color-scheme: light) {
-  body {
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    color: #333;
+  :root {
+    --nav-bg: #1f2937;
+    --nav-link: #f9fafb;
+    --accent: #3b82f6;
+    --hero-grad-1: #3b82f6;
+    --hero-grad-2: #2563eb;
+    --card-bg: white;
   }
-  nav {
-    background: #1f2937;
-  }
-  nav ul li a {
-    color: #f9fafb;
-  }
-  nav ul li a:hover {
-    color: #3b82f6;
-  }
-  .home-section h1 { color: #111827; }
-  .home-section p { color: #374151; }
+  body { background: #f8f9fa; color: #333; }
 }
 
-/* Dark theme */
 @media (prefers-color-scheme: dark) {
-  body {
-    background: linear-gradient(135deg, #111827, #1f2937);
-    color: #e5e7eb;
+  :root {
+    --nav-bg: #0f172a;
+    --nav-link: #f9fafb;
+    --accent: #60a5fa;
+    --hero-grad-1: #1e3a8a;
+    --hero-grad-2: #1d4ed8;
+    --card-bg: #1f2937;
   }
-  nav {
-    background: #0f172a;
-  }
-  nav ul li a {
-    color: #f9fafb;
-  }
-  nav ul li a:hover {
-    color: #60a5fa;
-  }
-  .home-section h1 { color: #f9fafb; }
-  .home-section p { color: #d1d5db; }
+  body { background: #111827; color: #e5e7eb; }
 }
 
-/* Responsive */
+/* ==== Responsive ==== */
 @media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
-  .home-section h1 {
-    font-size: 2rem;
-  }
+  nav ul { flex-direction: column; gap: 10px; }
+  .home-section h1 { font-size: 2rem; }
 }
