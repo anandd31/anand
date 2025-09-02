@@ -20,6 +20,6 @@ HTML · CSS · JavaScript · GitHub Pages
 ## How to run locally
 ```bash
 # clone and open locally
-git clone https://github.com/your-username/your-username.github.io.git
+git clone https://github.com/ananddalvi/ananddalvi.github.io.git
 cd your-username.github.io
 # open index.html in browser
