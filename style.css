@@ -156,3 +156,26 @@ footer a {
   transform: translateY(0);
 }
 
+/* === Scroll Animations === */
+.reveal {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.reveal.active { opacity: 1; transform: translate(0,0) scale(1); }
+
+/* Fade Up */
+.fade-up { transform: translateY(40px); }
+.fade-up.active { transform: translateY(0); }
+
+/* Fade Left */
+.fade-left { transform: translateX(-50px); }
+.fade-left.active { transform: translateX(0); }
+
+/* Fade Right */
+.fade-right { transform: translateX(50px); }
+.fade-right.active { transform: translateX(0); }
+
+/* Zoom In */
+.zoom-in { transform: scale(0.8); }
+.zoom-in.active { transform: scale(1); }
