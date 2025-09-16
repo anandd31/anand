@@ -36,7 +36,7 @@
   </header>
 
   <!-- About -->
-  <section id="about" class="reveal">
+  <section id="about" class="reveal fade-left">
     <h2>About Me</h2>
     <p>
       Hi! I'm <strong>Anand Dalvi</strong>, an aspiring Data Analyst with experience in econometrics,
@@ -48,7 +48,7 @@
   </section>
 
   <!-- Resume -->
-  <section id="resume" class="reveal">
+  <section id="resume" class="reveal fade-right">
     <h2>Resume</h2>
     <h3>Education</h3>
     <ul>
@@ -69,24 +69,24 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="reveal">
+  <section id="projects" class="reveal fade-up">
     <h2>Projects</h2>
-    <div class="project reveal">
+    <div class="project reveal zoom-in">
       <h3><i class="fa-solid fa-heart-pulse"></i> Women’s Health Analysis</h3>
       <p>Studied gender-based health disparities across India using NHS data and Excel.</p>
     </div>
-    <div class="project reveal">
+    <div class="project reveal zoom-in">
       <h3><i class="fa-solid fa-truck-fast"></i> Supply Chain Optimization</h3>
       <p>Developed logistics model in GAMS for cost-efficient transport decisions.</p>
     </div>
-    <div class="project reveal">
+    <div class="project reveal zoom-in">
       <h3><i class="fa-solid fa-file-invoice-dollar"></i> GST & Banking Data Insights</h3>
       <p>Automated GST and banking reports during internship at Kirtane & Pandit LLP.</p>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="reveal">
+  <section id="contact" class="reveal zoom-in">
     <h2>Contact</h2>
     <p><strong>Email:</strong> <a href="mailto:anand.dalvi.2024@sse.ac.in">anand.dalvi.2024@sse.ac.in</a></p>
     <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ananddalvi31" target="_blank">linkedin.com/in/ananddalvi31</a></p>
@@ -111,7 +111,7 @@
         if (elementTop < windowHeight - elementVisible) {
           reveals[i].classList.add("active");
         } else {
-          reveals[i].classList.remove("active"); // remove if you want re-animation
+          reveals[i].classList.remove("active");
         }
       }
     }
