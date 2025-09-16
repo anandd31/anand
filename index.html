@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anand Dalvi — Data Analytics Portfolio</title>
+  <title>Anand Dalvi – Portfolio</title>
 
-  <!-- Favicon (optional) — place favicon.ico in repo root or remove this line -->
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- Icons + Theme CSS -->
+  <!-- FontAwesome + CSS -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
@@ -17,43 +17,82 @@
   <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
-      <li><a href="resume.html"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
-      <li><a href="projects.html"><i class="fa-solid fa-diagram-project"></i> Portfolio</a></li>
-      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+      <li><a href="#resume"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
+      <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+      <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero / Intro -->
-  <header class="home-section">
+  <!-- Hero -->
+  <header id="home" class="home-section">
     <h1>Hello, I'm <span style="font-weight:700;">Anand Dalvi</span></h1>
     <p>Data Analyst · MSc. Economics (Data Analytics)</p>
     <div class="hero-buttons">
-      <a class="btn" href="about.html"><i class="fa-solid fa-user"></i> About Me</a>
-      <a class="btn btn-outline" href="projects.html"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
+      <a class="btn" href="#about"><i class="fa-solid fa-user"></i> About Me</a>
+      <a class="btn btn-outline" href="#projects"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
     </div>
   </header>
 
-  <!-- Optional quick intro section (keep or remove) -->
-  <section>
-    <h2>What I Do</h2>
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
     <p>
-      I analyze data to uncover insights and build clear visuals for decision-making.
-      Tools I enjoy: Python, R, SQL, Power BI, Excel. Interests: econometrics,
-      hypothesis testing, and business analytics.
+      Hi! I'm <strong>Anand Dalvi</strong>, an aspiring Data Analyst with experience in econometrics,
+      visualization, and applied analytics. Skilled in Python, R, SQL, Power BI, and Excel.
     </p>
+    <a href="assets/Anand_Dalvi_CV.pdf" download class="btn">
+      <i class="fa-solid fa-download"></i> Download My CV
+    </a>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <h3>Education</h3>
+    <ul>
+      <li>M.Sc. Economics (Data Analytics) – Symbiosis School of Economics, Pune (Expected 2026)</li>
+      <li>B.Sc. Economics – Gokhale Institute of Politics and Economics, Pune (2024)</li>
+    </ul>
+    <h3>Internships</h3>
+    <ul>
+      <li>Data Analyst Intern, Kirtane &amp; Pandit LLP (2025)</li>
+      <li>Research Intern, CEED (2023)</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3><i class="fa-solid fa-heart-pulse"></i> Women’s Health Analysis</h3>
+      <p>Studied gender-based health disparities across India using NHS data and Excel.</p>
+    </div>
+    <div class="project">
+      <h3><i class="fa-solid fa-truck-fast"></i> Supply Chain Optimization</h3>
+      <p>Developed logistics model in GAMS for cost-efficient transport decisions.</p>
+    </div>
+    <div class="project">
+      <h3><i class="fa-solid fa-file-invoice-dollar"></i> GST & Banking Data Insights</h3>
+      <p>Automated GST and banking reports during internship at Kirtane & Pandit LLP.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:anand.dalvi.2024@sse.ac.in">anand.dalvi.2024@sse.ac.in</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ananddalvi31" target="_blank">linkedin.com/in/ananddalvi31</a></p>
+    <p><strong>Location:</strong> Pune, India</p>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Anand Dalvi</p>
-    <a href="https://linkedin.com/in/ananddalvi31" target="_blank" rel="noopener">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/anandd31" target="_blank" rel="noopener">
-      <i class="fa-brands fa-github"></i>
-    </a>
+    <a href="https://linkedin.com/in/ananddalvi31" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/anandd31" target="_blank"><i class="fa-brands fa-github"></i></a>
   </footer>
 </body>
 </html>
+
