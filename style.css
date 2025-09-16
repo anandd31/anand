@@ -1,123 +1,147 @@
-/* ==== Reset ==== */
+/* === Reset === */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
-  transition: background 0.3s ease, color 0.3s ease;
-  padding-top: 70px;
+  background: #f9fafb;
+  color: #333;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* ==== Navigation ==== */
+/* === Navigation === */
 nav {
   position: fixed;
   top: 0; left: 0; width: 100%;
-  background: var(--nav-bg);
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
   padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 nav ul {
   display: flex; justify-content: center; list-style: none;
 }
-nav ul li { margin: 0 15px; }
+nav ul li { margin: 0 20px; }
 nav ul li a {
   text-decoration: none;
+  color: #fff;
   font-weight: 600;
-  color: var(--nav-link);
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
-nav ul li a:hover { color: var(--accent); }
+nav ul li a:hover { color: #facc15; }
 
-/* ==== Hero Section ==== */
+/* === Hero === */
 .home-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 120px 20px 80px;
-  background: linear-gradient(135deg, var(--hero-grad-1), var(--hero-grad-2));
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
   color: white;
+  animation: fadeIn 1.5s ease;
 }
 .home-section h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
 .home-section p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
 }
 .hero-buttons .btn {
   display: inline-block;
   padding: 12px 25px;
   margin: 5px;
-  background: white;
-  color: var(--accent);
-  text-decoration: none;
   border-radius: 6px;
+  text-decoration: none;
   font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+.hero-buttons .btn {
+  background: #fff;
+  color: #3b82f6;
 }
 .hero-buttons .btn-outline {
-  background: transparent;
   border: 2px solid white;
+  background: transparent;
   color: white;
 }
-
-/* ==== Sections ==== */
-section {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 20px;
+.hero-buttons .btn:hover {
+  transform: translateY(-3px);
+  background: #facc15;
+  color: #000;
 }
-h2 { margin-bottom: 20px; color: var(--accent); }
-h3 { margin: 15px 0 8px; }
 
-/* ==== Project Cards ==== */
+/* === Sections === */
+section {
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 40px 20px;
+  animation: fadeUp 1.2s ease forwards;
+  opacity: 0;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #3b82f6;
+}
+h3 { margin: 15px 0 8px; color: #9333ea; }
+
+/* === Projects === */
 .project {
-  background: var(--card-bg);
+  background: white;
   margin: 20px 0;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.project h3 { color: #3b82f6; }
 
-/* ==== Footer ==== */
+/* === Contact === */
+#contact a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+#contact a:hover { text-decoration: underline; }
+
+/* === Footer === */
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  color: white;
   margin-top: 50px;
-  background: var(--nav-bg);
-  color: var(--nav-link);
 }
 footer a {
-  color: var(--accent);
-  margin: 0 8px;
+  color: #facc15;
+  margin: 0 10px;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 
-/* ==== Auto Dark/Light Mode ==== */
-@media (prefers-color-scheme: light) {
-  :root {
-    --nav-bg: #1f2937;
-    --nav-link: #f9fafb;
-    --accent: #3b82f6;
-    --hero-grad-1: #3b82f6;
-    --hero-grad-2: #2563eb;
-    --card-bg: white;
-  }
-  body { background: #f8f9fa; color: #333; }
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --nav-bg: #0f172a;
-    --nav-link: #f9fafb;
-    --accent: #60a5fa;
-    --hero-grad-1: #1e3a8a;
-    --hero-grad-2: #1d4ed8;
-    --card-bg: #1f2937;
-  }
-  body { background: #111827; color: #e5e7eb; }
-}
-
-/* ==== Responsive ==== */
-@media (max-width: 600px) {
-  nav ul { flex-direction: column; gap: 10px; }
+/* === Responsive === */
+@media (max-width: 768px) {
+  nav ul { flex-direction: column; }
   .home-section h1 { font-size: 2rem; }
 }
+
