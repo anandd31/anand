@@ -1,30 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anand Dalvi - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anand Dalvi | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Anand Dalvi</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <div class="container">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Hello! I am Anand Dalvi, an MSc Economics (Data Analytics) student passionate about economic research, data analysis, and development-focused projects. Explore my site to learn more about my work and skills.</p>
-        <img src="https://anandd31.github.io/ananddalvi.github.io/assets/profile.jpg" alt="Anand Dalvi" class="profile-pic">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">Anand Dalvi</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-toggle"><i class="fas fa-bars"></i></div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <img src="assets/profile.jpg" alt="Anand Dalvi" class="profile-pic">
+    <h1 class="fade-in">Anand Dalvi</h1>
+    <p class="tagline fade-in">Aspiring Data Analyst | Economic Modelling & Statistical Skills</p>
+    <div class="cta-buttons fade-in">
+      <a href="#projects" class="btn btn-primary">View Work</a>
+      <a href="assets/Anand_Dalvi_CV.pdf" class="btn btn-secondary" download>Download CV</a>
     </div>
+  </section>
 
-    <footer>
-        &copy; 2025 Anand Dalvi. All rights reserved.
-    </footer>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am a data analyst with experience analyzing large datasets in GST, banking, and audit sectors. Proficient in Python, R, SQL, Excel, and Power BI, I translate data into actionable insights.</p>
+    <div class="info-cards">
+      <div class="card">
+        <h3>Education</h3>
+        <ul>
+          <li>M.Sc. Economics, Symbiosis School of Economics (Expected 2026)</li>
+          <li>B.Sc. Economics, Gokhale Institute of Politics & Economics (2024)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Certifications</h3>
+        <ul>
+          <li>Social Media Data Analytics (Coursera)</li>
+          <li>Applied Text Mining in Python (Coursera)</li>
+          <li>Financial Markets (Coursera)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Supply Chain Optimization Model</h3>
+        <p>GAMS-based logistics model to improve cost efficiency.</p>
+      </div>
+      <div class="project-card">
+        <h3>Women's Health Issues Across India</h3>
+        <p>Bachelor's thesis using NH survey data and Excel for analysis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="experience-cards">
+      <div class="exp-card">
+        <h3>Data Analyst Intern | Kirtane & Pandit LLP (Jun–Aug 2025)</h3>
+        <p>Analyzed financial datasets using Python and Power BI, automated reporting, collaborated with teams.</p>
+      </div>
+      <div class="exp-card">
+        <h3>Research Assistant | CFEED (May–Aug 2022)</h3>
+        <p>Compiled data, assisted with reports, visualized research findings.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <h3>Python, R, SQL</h3>
+        <div class="progress-bar"><span style="width:90%"></span></div>
+      </div>
+      <div class="skill">
+        <h3>Power BI, Excel</h3>
+        <div class="progress-bar"><span style="width:85%"></span></div>
+      </div>
+      <div class="skill">
+        <h3>GAMS, PowerPoint</h3>
+        <div class="progress-bar"><span style="width:80%"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p>Email: anand.dalvi.2024@sse.ac.in | Phone: 7020969649</p>
+    <p>Location: Pimple Nilakh, Pune - 411027</p>
+    <a href="https://github.com/anandd31" target="_blank">GitHub Profile</a>
+  </section>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
