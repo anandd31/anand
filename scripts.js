@@ -1,27 +1,28 @@
-// ===== Smooth Scroll for Anchor Links =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click',function(e){
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
   });
 });
 
-// ===== Mobile Navbar Toggle =====
-const navLinks = document.querySelector('.nav-links');
-const navToggle = document.createElement('div');
-navToggle.classList.add('nav-toggle');
-navToggle.innerHTML = '<i class="fas fa-bars" style="color:white; font-size:1.5rem;"></i>';
-document.querySelector('.navbar').appendChild(navToggle);
+// Mobile Navbar Toggle
+const navLinks=document.querySelector('.nav-links');
+document.querySelector('.nav-toggle').addEventListener('click',()=>{navLinks.classList.toggle('active');});
 
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+// Contact Form
+document.querySelector('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  alert('Thanks! I will get back to you soon.');
+  e.target.reset();
 });
 
-// ===== Contact Form Submission =====
-const form = document.querySelector('form');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert('Thank you for your message! I will get back to you soon.');
-  form.reset();
+// Animate skill bars on scroll
+const skills=document.querySelectorAll('.progress-bar span');
+const skillSection=document.querySelector('#skills');
+window.addEventListener('scroll',()=>{
+  const rect=skillSection.getBoundingClientRect();
+  if(rect.top < window.innerHeight){
+    skills.forEach(bar=>bar.style.width=bar.style.width || bar.getAttribute('style'));
+  }
 });
