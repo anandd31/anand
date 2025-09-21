@@ -8,7 +8,7 @@ A modern, responsive portfolio website showcasing my skills and experience as a 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
 ## 🌐 Live Website
-Visit my portfolio at: [https://anandd31.github.io/portfolio/](https://anandd31.github.io/portfolio/)
+Visit my portfolio at: [https://anandd31.github.io/portfolio_Anand/](https://anandd31.github.io/portfolio_Anand/)
 
 ## 📋 About
 
