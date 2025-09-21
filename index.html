@@ -119,6 +119,38 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
+        /* Header CV Download Button */
+        .header-cv-download {
+            margin-top: 25px;
+        }
+
+        .header-cv-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-cv-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-cv-btn i {
+            font-size: 1.1em;
+        }
+
         /* Navigation Styles */
         .navigation {
             display: flex;
@@ -382,7 +414,98 @@
             margin: 20px 0;
         }
 
-        /* Contact Section */
+        /* CV Download Section */
+        .cv-download-section {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cv-download-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 500px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .cv-download-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cv-icon {
+            font-size: 3em;
+            opacity: 0.9;
+        }
+
+        .cv-content h3 {
+            margin-bottom: 8px;
+            font-size: 1.3em;
+        }
+
+        .cv-content p {
+            margin-bottom: 15px;
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
+
+        .cv-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cv-download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Improved cert-item grid layout */
+        .skills-grid .cert-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 0;
+            border-left: 4px solid #4ecdc4;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .skills-grid .cert-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .skills-grid .cert-item h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .skills-grid .cert-item p {
+            margin-bottom: 8px;
+        }
+
+        .skills-grid .cert-item p:last-child {
+            margin-bottom: 0;
+            font-size: 0.9em;
+            color: #666;
+        }
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -566,6 +689,13 @@
                 <a href="https://github.com/anandd31" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="tel:+917020969649" title="Phone"><i class="fas fa-phone"></i></a>
                 <a href="https://linkedin.com/in/anand-dalvi" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            
+            <!-- Header CV Download Button -->
+            <div class="header-cv-download">
+                <a href="documents/Anand_Dalvi_Resume.pdf" download="Anand_Dalvi_Resume.pdf" class="header-cv-btn">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
             </div>
         </header>
 
@@ -822,22 +952,64 @@
         <section class="section">
             <h2><i class="fas fa-certificate"></i> Professional Certifications</h2>
             
-            <div class="cert-item">
-                <h3>📱 Social Media Data Analytics</h3>
-                <p><strong>University of Washington, Coursera</strong></p>
-                <p>Advanced techniques for analyzing social media data patterns and trends</p>
+            <div class="skills-grid">
+                <div class="cert-item">
+                    <h3>🐍 Introduction to Python Programming</h3>
+                    <p><strong>University of Pennsylvania, Coursera</strong></p>
+                    <p>Comprehensive foundation in Python syntax, control structures, and object-oriented programming principles</p>
+                </div>
+
+                <div class="cert-item">
+                    <h3>📊 Data Collection and Processing with Python</h3>
+                    <p><strong>University of Michigan, Coursera</strong></p>
+                    <p>Advanced techniques for data collection, cleaning, and processing using Python libraries</p>
+                </div>
+
+                <div class="cert-item">
+                    <h3>🔬 Introduction to Data Science in Python</h3>
+                    <p><strong>University of Michigan, Coursera</strong></p>
+                    <p>Data manipulation, statistical analysis, and visualization using pandas, NumPy, and matplotlib</p>
+                </div>
+
+                <div class="cert-item">
+                    <h3>📱 Social Media Data Analytics</h3>
+                    <p><strong>University of Washington, Coursera</strong></p>
+                    <p>Advanced techniques for analyzing social media data patterns and trends</p>
+                </div>
+
+                <div class="cert-item">
+                    <h3>📝 Applied Text Mining in Python</h3>
+                    <p><strong>University of Michigan, Coursera</strong></p>
+                    <p>Natural language processing and text analysis using Python libraries and NLTK</p>
+                </div>
+
+                <div class="cert-item">
+                    <h3>📊 Power BI for Data Science and Analytics</h3>
+                    <p><strong>Edureka</strong></p>
+                    <p>Part of Mastering Power BI for Data Analytics & Storytelling Specialization - Advanced dashboard creation and data visualization</p>
+                </div>
+
+                <div class="cert-item">
+                    <h3>💰 Financial Markets</h3>
+                    <p><strong>Yale University, Coursera</strong></p>
+                    <p>Comprehensive understanding of financial markets, instruments, and analysis</p>
+                </div>
             </div>
 
-            <div class="cert-item">
-                <h3>🐍 Applied Text Mining in Python</h3>
-                <p><strong>University of Michigan, Coursera</strong></p>
-                <p>Natural language processing and text analysis using Python libraries</p>
-            </div>
-
-            <div class="cert-item">
-                <h3>💰 Financial Markets</h3>
-                <p><strong>Yale University, Coursera</strong></p>
-                <p>Comprehensive understanding of financial markets, instruments, and analysis</p>
+            <!-- Download CV Section -->
+            <div class="cv-download-section">
+                <div class="cv-download-card">
+                    <div class="cv-icon">
+                        <i class="fas fa-file-download"></i>
+                    </div>
+                    <div class="cv-content">
+                        <h3>Download My Resume</h3>
+                        <p>Get a detailed PDF version of my complete professional profile</p>
+                        <a href="documents/Anand_Dalvi_Resume.pdf" download="Anand_Dalvi_Resume.pdf" class="cv-download-btn">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
